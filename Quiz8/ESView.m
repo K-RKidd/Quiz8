@@ -105,19 +105,6 @@
     [path addLineToPoint:p];
     [path stroke];
 }
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        points = [[NSMutableArray alloc] init];
-        [points addObject:[NSValue valueWithCGPoint:CGPointMake(140, 190)]];
-    }
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    
-    [self becomeFirstResponder];
-    return self;
-}
--(BOOL) canBecomeFirstResponder {
-    return YES;
-}
+
 
 @end
