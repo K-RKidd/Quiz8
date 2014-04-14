@@ -31,17 +31,6 @@
     _CurrentHorizontalAngle = CurrentHorizontalAngle;
     [self setNeedsDisplay];
 }
-/// Intialize points array
--(id)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    if (self){
-        points = [[NSMutableArray alloc]init];
-        ///start point
-        NSValue *p = [NSValue valueWithCGPoint:CGPointMake(100, 100)];
-        [points addObject:p];
-    }
-    return self;
-}
 
 ///Detect shakes to erase
 -(void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
@@ -65,14 +54,14 @@
 }
 -(void) drawRect:(CGRect)rect{
     UIBezierPath *bz = [[UIBezierPath alloc]init];
-    [bz setLineWidth:4];
+    [bz setLineWidth:1.3];
     [[UIColor blackColor]setStroke];
     [bz moveToPoint:[[points firstObject] CGPointValue]];
     for (id p in points){
         [bz addLineToPoint:[p CGPointValue]];
     }
     CGPoint lastPoint = [[points lastObject ]CGPointValue];
-    currentPoint = CGPointMake(lastPoint.x + self.CurrentHorizontalAngle*10.0 , lastPoint.y + self.CurrentVerticalAngle*10.0);
+    currentPoint = CGPointMake(lastPoint.x + self.CurrentHorizontalAngle*9.2 , lastPoint.y + self.CurrentVerticalAngle*9.2);
     if (currentPoint.x < 0){
         currentPoint.x = 0;
     }
@@ -94,7 +83,7 @@
     [[UIColor whiteColor]setStroke];
     UIBezierPath *path = [[UIBezierPath alloc]init];
     [path moveToPoint:currentPoint];
-    [path setLineWidth:4];
+    [path setLineWidth:4.0];
     CGPoint p = CGPointMake(currentPoint.x-2, currentPoint.y-2);
     [path addLineToPoint:p];
     p.x += 4.0;
@@ -104,6 +93,21 @@
     p.x -= 4.0;
     [path addLineToPoint:p];
     [path stroke];
+}
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // Initialization code
+        points = [[NSMutableArray alloc] init];
+        [points addObject:[NSValue valueWithCGPoint:CGPointMake(140, 190)]];
+    }
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    
+    [self becomeFirstResponder];
+    return self;
+}
+-(BOOL)canBecomeFirstResponder{
+    return YES;
 }
 
 

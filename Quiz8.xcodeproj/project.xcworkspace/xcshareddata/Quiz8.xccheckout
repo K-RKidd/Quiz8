@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A0366075-9B6E-4A58-9C7F-0934AA39D839</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Quiz8</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5AD91948-90E9-4D4D-923A-906245A36A18</key>
+		<string>https://github.com/K-RKidd/Quiz8.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Quiz8.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5AD91948-90E9-4D4D-923A-906245A36A18</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/K-RKidd/Quiz8.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5AD91948-90E9-4D4D-923A-906245A36A18</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5AD91948-90E9-4D4D-923A-906245A36A18</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Quiz8</string>
+		</dict>
+	</array>
+</dict>
+</plist>
